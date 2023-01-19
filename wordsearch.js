@@ -1,4 +1,8 @@
 const wordSearch = (letters, word) => {
+  if (letters.length === 0) {
+    return false;
+  }
+
   const horizontalJoin = letters.map((rowLetter) => rowLetter.join(""));
   const verticalJoin = transpose(letters).map((columnLetter) =>
     columnLetter.join("")
